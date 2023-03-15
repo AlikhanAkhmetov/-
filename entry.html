@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MpRQ4Q3ax2A" title="YouTube video player" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>Вам предлагается уникальная возможность увидеть ясное отличие между текстом написанным человеком и ниспосланным от Бога,
+  благодаря тому что вы можете сравнить Математическое чудо Корана и любой текст на арабском языке, 
+для этого вы можете оставить текст напечатанный заранее в полях для вашего удобства 
+либо напечатать свои любые символы на арабском языке и номера стихов и номер главы , и нажать на кнопку готово. 
+Затем если Бог пожелал вам станет ясно почему любой текст сделанный человеком не сможет повторить математическое чудо Корана подобное первой суре Корана
+
+Для вашего облегчения,  если вы не знаете как включить арабскую клавиатуру у вас на устройстве, 
+написаны тексты по умолчанию на арабском языке, а также и номера стихов и номер главы, 
+которые вы можете не изменять а просто нажать готово, 
+чтобы продолжить просмотр сравнение человеческого текста и ниспосланного от Бога.</p>
+<form method='POST' action='/results'>
+<table>
+<p>Напишите в поля любой текст на арабском языке с пробелами, без знаков препинания и иных символов:</p>
+<tr><td>Номер главы:</td><td><input name='nomer_glavi' type='TEXT' value='5' width='60'></td></tr>
+<tr><td>Стих 1:</td><td><input name='stih_1' type='TEXT' value='مأجوج معجم المفردات'></td></tr>
+<tr><td>Стих 2:</td><td><input name='stih_2' type='TEXT' value='مأجوج اسم المفعول من أج' width='60'></td></tr>
+<tr><td>Стих 3:</td><td><input name='stih_3' type='TEXT' value='أج معجم الغني' width='60'></td></tr>
+<tr><td>Стих 4:</td><td><input name='stih_4' type='TEXT' value='فعل ثلاثي لازم متعد بحرف' width='60'></td></tr>
+<tr><td>Стих 5:</td><td><input name='stih_5' type='TEXT' value='أجت النار تلهبت توقدت' width='60'></td></tr>
+<tr><td>Стих 6:</td><td><input name='stih_6' type='TEXT' value='أج في سيره إذا كان حفيفه كحفيف اللهب' width='60'></td></tr>
+<tr><td>Стих 7:</td><td><input name='stih_7' type='TEXT' value='انظر في القواميس' width='60'></td></tr>
+<tr><td>Номер стиха 1:</td><td><input name='number_stih_1' type='TEXT' value='1' width='60'></td></tr>
+<tr><td>Номер стиха 2:</td><td><input name='number_stih_2' type='TEXT' value='2' width='60'></td></tr>
+<tr><td>Номер стиха 3:</td><td><input name='number_stih_3' type='TEXT' value='3' width='60'></td></tr>
+<tr><td>Номер стиха 4:</td><td><input name='number_stih_4' type='TEXT' value='4' width='60'></td></tr>
+<tr><td>Номер стиха 5:</td><td><input name='number_stih_5' type='TEXT' value='5' width='60'></td></tr>
+<tr><td>Номер стиха 6:</td><td><input name='number_stih_6' type='TEXT' value='6' width='60'></td></tr>
+<tr><td>Номер стиха 7:</td><td><input name='number_stih_7' type='TEXT' value='7' width='60'></td></tr>
+</table>
+<p>Если ты готов жми кнопку:</p>
+<p><input value='Готово!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
